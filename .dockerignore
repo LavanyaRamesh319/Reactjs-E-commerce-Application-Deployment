@@ -1,8 +1,0 @@
-.git
-.gitignore
-README.md
-Jenkinsfile
-docker-compose.yml
-build.sh
-deploy.sh
-node_modules
