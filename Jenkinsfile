@@ -17,14 +17,21 @@ pipeline {
         stage('Set Image Name') {
             steps {
                 script {
-                    if (env.BRANCH_NAME == "main") {
+
+                    def branch = env.GIT_BRANCH ?: sh(
+                        script: "git rev-parse --abbrev-ref HEAD",
+                        returnStdout: true
+                    ).trim()
+
+                    echo "Current Branch: ${branch}"
+
+                    if (branch.contains("main")) {
                         env.IMAGE_NAME = "lavanyadevops1/build-prod"
                     } else {
                         env.IMAGE_NAME = "lavanyadevops1/build-dev"
                     }
 
-                    echo "Branch: ${env.BRANCH_NAME}"
-                    echo "Image: ${env.IMAGE_NAME}"
+                    echo "Docker Image: ${env.IMAGE_NAME}"
                 }
             }
         }
@@ -68,9 +75,9 @@ pipeline {
                 docker rm build-app || true
 
                 docker run -d \
-                    --name build-app \
-                    -p 80:80 \
-                    $IMAGE_NAME:$IMAGE_TAG
+                  --name build-app \
+                  -p 80:80 \
+                  $IMAGE_NAME:$IMAGE_TAG
                 '''
             }
         }
@@ -78,11 +85,11 @@ pipeline {
 
     post {
         success {
-            echo 'Deployment Successful!'
+            echo "Deployment Successful!"
         }
 
         failure {
-            echo 'Pipeline Failed!'
+            echo "Pipeline Failed!"
         }
     }
 }
