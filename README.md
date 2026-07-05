@@ -506,7 +506,7 @@ Uptime Kuma
 
 ↓
 
-Email Notification (If Down)
+Email Notification (If Up or Down)
 ```
 
 ---
@@ -527,23 +527,5 @@ The following deliverables are included as part of the project submission:
 - Grafana Dashboard
 - Uptime Kuma Monitoring
 - Email Alert Configuration
-
----
-
-# Screenshots
-
-The repository includes screenshots for:
-
-- Jenkins Dashboard
-- Jenkins Pipeline Execution
-- AWS EC2 Console
-- Security Group Configuration
-- Docker Hub Repositories
-- Running Docker Containers
-- Application Deployment
-- Prometheus Targets
-- Grafana Dashboard
-- Uptime Kuma Dashboard
-- Email Alert Notification
 
 ---
