@@ -199,6 +199,15 @@ The entire workflow is defined using a Declarative Jenkins Pipeline stored insid
 
 <img width="940" height="459" alt="image" src="https://github.com/user-attachments/assets/2947b6ac-f551-4e07-9ad8-5d4365971dcb" />
 
+<img width="940" height="474" alt="image" src="https://github.com/user-attachments/assets/f5b579d1-e39c-4321-bde3-6549ac74f2c4" />
+
+<img width="940" height="824" alt="image" src="https://github.com/user-attachments/assets/9ea91ae5-c436-4433-acc7-ca73f818ac19" />
+
+<img width="769" height="731" alt="image" src="https://github.com/user-attachments/assets/415795bc-7024-4f19-b5fd-6e711dd4ccca" />
+
+<img width="940" height="535" alt="image" src="https://github.com/user-attachments/assets/7007cf92-a1cd-4e70-9be3-ef97ceeca811" />
+
+
 ---
 
 # GitHub Webhook
